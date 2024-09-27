@@ -1,0 +1,88 @@
+<div class="container mt-4">
+  <h2>Task Management</h2>
+
+  <!-- Filter by Date -->
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <label for="dateFilter">Filter by Date:</label>
+      <input type="date" id="dateFilter" class="form-control" [(ngModel)]="selectedDate" (change)="filterLeadsByDate()">
+    </div>
+  </div>
+
+  <!-- Executive Form -->
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <form (ngSubmit)="submitForm()">
+        <div class="form-group">
+          <label for="executiveSelect">Select Executive:</label>
+          <select id="executiveSelect" class="form-control" [(ngModel)]="selectedExecutive" name="executive" required>
+            <option *ngFor="let executive of executives" [value]="executive">{{ executive }}</option>
+          </select>
+        </div>
+        <div class="form-group mt-3">
+          <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Table for Leads -->
+  <!-- <div class="table-scroll-wrapper">
+    <div class="table-scrollbar" (scroll)="syncScroll($event)">
+      <div class="fake-scroll"></div>
+    </div> -->
+
+    <div class="table-container" #tableContainer>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Select</th>
+            <th>Unique Query ID</th>
+            <th>Query Type</th>
+            <th>Query Time</th>
+            <th>Sender Name</th>
+            <th>Sender Mobile</th>
+            <th>Sender Email</th>
+            <th>Subject</th>
+            <th>Sender Company</th>
+            <th>Sender Address</th>
+            <th>Sender City</th>
+            <th>Sender State</th>
+            <th>Sender Pincode</th>
+            <th>Sender Country ISO</th>
+            <th>Query Product Name</th>
+            <th>Query Message</th>
+            <th>Query MCAT Name</th>
+            <th>Call Duration</th>
+            <th>Receiver Mobile</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let lead of filteredLeads">
+            <td>
+              <input type="checkbox" [(ngModel)]="lead.selected">
+            </td>
+            <td>{{ lead.UNIQUE_QUERY_ID }}</td>
+            <td>{{ lead.QUERY_TYPE }}</td>
+            <td>{{ lead.QUERY_TIME }}</td>
+            <td>{{ lead.SENDER_NAME }}</td>
+            <td>{{ lead.SENDER_MOBILE }}</td>
+            <td>{{ lead.SENDER_EMAIL }}</td>
+            <td>{{ lead.SUBJECT }}</td>
+            <td>{{ lead.SENDER_COMPANY }}</td>
+            <td>{{ lead.SENDER_ADDRESS }}</td>
+            <td>{{ lead.SENDER_CITY }}</td>
+            <td>{{ lead.SENDER_STATE }}</td>
+            <td>{{ lead.SENDER_PINCODE }}</td>
+            <td>{{ lead.SENDER_COUNTRY_ISO }}</td>
+            <td>{{ lead.QUERY_PRODUCT_NAME }}</td>
+            <td>{{ lead.QUERY_MESSAGE }}</td>
+            <td>{{ lead.QUERY_MCAT_NAME }}</td>
+            <td>{{ lead.CALL_DURATION }}</td>
+            <td>{{ lead.RECEIVER_MOBILE }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+

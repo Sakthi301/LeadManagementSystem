@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto; 
+}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* global styles.css or similar file */
+
+/* Warning styles */
+.my-warning-title {
+  color: #721c24  !important; /* Bootstrap warning color */
+}
+.my-warning-confirm {
+  background-color: #28a745 !important; /* Bootstrap warning button color */
+  border-color: #28a745 !important;
+}
+.my-warning-cancel {
+  background-color: #dc3545 !important; /* Bootstrap secondary button color */
+  border-color: #dc3545 !important;
+}
+
+/* Success styles */
+.my-success-title {
+  color: #155724 !important; /* Bootstrap success color */
+}
+.my-success-confirm {
+  background-color: #28a745 !important; /* Bootstrap success button color */
+  border-color: #28a745 !important;
+}
+
+/* Error styles */
+.my-error-title {
+  color: #721c24 !important; /* Bootstrap danger color */
+}
+.my-error-confirm {
+  background-color: #dc3545 !important; /* Bootstrap danger button color */
+  border-color: #dc3545 !important;
+}

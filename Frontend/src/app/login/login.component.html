@@ -1,0 +1,63 @@
+<div class="bg-image"></div>
+<div class="container mt-5 content">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <div><img src="../../assets/Logo png rks healthcare.png" alt="rks login logo" style="max-width: fit-content"></div>
+          <h3 class="text-center text-success fs-4 mt-2">CRM APPLICATION</h3>
+        </div>
+        <div class="card-body">
+          <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <label for="username" class="fw-bold mb-2">USERNAME</label>
+              <input
+                type="text"
+                class="form-control"
+                id="username"
+                [(ngModel)]="loginData.username"
+                name="username"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="password" class="fw-bold mb-2 mt-2">PASSWORD</label>
+              <div class="position-relative">
+                <input
+                  type="{{ showPassword ? 'text' : 'password' }}"
+                  class="form-control"
+                  id="password"
+                  [(ngModel)]="loginData.password"
+                  name="password"
+                  required
+                />
+                <i
+                  class="bi"
+                  [ngClass]="showPassword ? 'bi-eye-slash' : 'bi-eye'"
+                  (click)="togglePasswordVisibility()"
+                 
+                ></i>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="role" class="fw-bold mb-2 mt-2">ROLE</label>
+              <select
+                id="role"
+                class="form-control"
+                [(ngModel)]="loginData.role"
+                name="role"
+                required
+              >
+                <option value="">Select Role</option>
+                <option *ngFor="let role of roles" [value]="role">{{ role }}</option>
+              </select>
+            </div>
+            <div class="d-flex justify-content-center mt-4">
+              <button type="submit" class="btn btn-success btn-lg">Login</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

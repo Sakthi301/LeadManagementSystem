@@ -1,0 +1,24 @@
+.table-scroll-wrapper {
+  overflow: auto;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  /* Enables horizontal scroll */
+  overflow-y: auto;
+  /* Enables vertical scroll */
+  max-height: 500px;
+  /* Adjust height as needed */
+}
+
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-container th,
+.table-container td {
+  white-space: nowrap;
+  /* Prevents text from wrapping to the next line */
+}

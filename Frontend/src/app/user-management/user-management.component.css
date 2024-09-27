@@ -1,0 +1,15 @@
+.container {
+  max-width: 90%;
+  background-color: #f5fff7; /* Light background shade */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.card {
+  margin-top: 20px;
+}
+
+.table-responsive {
+  margin-top: 20px;
+}

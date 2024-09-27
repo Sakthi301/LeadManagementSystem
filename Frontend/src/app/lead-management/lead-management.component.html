@@ -1,0 +1,60 @@
+<div class="container mt-5">
+  <h2>Lead Management</h2>
+
+  <div class="table-scroll-wrapper mt-3">
+    <div class="table-container">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Unique Query ID</th>
+            <th>Query Type</th>
+            <th>Query Time</th>
+            <th>Sender Name</th>
+            <th>Sender Mobile</th>
+            <th>Sender Email</th>
+            <th>Subject</th>
+            <th>Sender Company</th>
+            <th>Sender Address</th>
+            <th>Sender City</th>
+            <th>Sender State</th>
+            <th>Sender Pincode</th>
+            <th>Sender Country ISO</th>
+            <th>Query Product Name</th>
+            <th>Query Message</th>
+            <th>Query MCAT Name</th>
+            <th>Call Duration</th>
+            <th>Receiver Mobile</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let lead of leads">
+            <td>{{ lead.id }}</td> <!-- Added ID column -->
+            <td>{{ lead.UNIQUE_QUERY_ID }}</td>
+            <td>{{ lead.QUERY_TYPE }}</td>
+            <td>{{ lead.QUERY_TIME }}</td>
+            <td>{{ lead.SENDER_NAME }}</td>
+            <td>{{ lead.SENDER_MOBILE }}</td>
+            <td>{{ lead.SENDER_EMAIL }}</td>
+            <td>{{ lead.SUBJECT }}</td>
+            <td>{{ lead.SENDER_COMPANY }}</td>
+            <td>{{ lead.SENDER_ADDRESS }}</td>
+            <td>{{ lead.SENDER_CITY }}</td>
+            <td>{{ lead.SENDER_STATE }}</td>
+            <td>{{ lead.SENDER_PINCODE }}</td>
+            <td>{{ lead.SENDER_COUNTRY_ISO }}</td>
+            <td>{{ lead.QUERY_PRODUCT_NAME }}</td>
+            <td>{{ lead.QUERY_MESSAGE }}</td>
+            <td>{{ lead.QUERY_MCAT_NAME }}</td>
+            <td>{{ lead.CALL_DURATION }}</td>
+            <td>{{ lead.RECEIVER_MOBILE }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+  
+
+  

@@ -1,0 +1,121 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.card-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  border-radius: 8px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  border: none;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background-color: #fff;
+  flex: 1 1 calc(30% - 20px); /* Increased to make cards slightly larger */
+  max-width: 400px; /* Increased max-width for larger cards */
+  box-sizing: border-box;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
+}
+
+.card .card-block {
+  padding: 20px;
+  position: relative;
+}
+
+.bg-c-blue {
+  background: linear-gradient(135deg, #4099ff, #73b4ff);
+}
+
+.bg-c-pink {
+  background: linear-gradient(135deg, #FF5370, #ff869a);
+}
+
+.bg-c-yellow {
+  background: linear-gradient(135deg, #FFA07A, #FFD54F);
+}
+
+.bg-c-green {
+  background: linear-gradient(135deg, #2ed8b6, #59e0c5);
+}
+
+.bg-c-grey {
+  background: linear-gradient(135deg, #95a5a6, #bdc3c7);
+}
+
+.bg-c-facebook {
+  background: linear-gradient(135deg, #3b5998, #8b9dc3);
+}
+
+.bg-c-tradeindia {
+  background: linear-gradient(135deg, #ff8a65, #ffd54f);
+}
+
+.logo-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 1024px) {
+  .card {
+    flex: 1 1 calc(40% - 20px); /* Adjusted to 2.5 cards per row on tablets */
+    max-width: 100%; 
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 calc(50% - 20px); 
+  }
+
+  .logo-img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    flex: 1 1 100%; 
+    max-width: 100%; 
+  }
+
+  .card .card-block {
+    padding: 15px;
+  }
+
+  .logo-img {
+    width: 30px;
+    height: 30px;
+  }
+}

@@ -1,0 +1,53 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar img {
+  max-height: 60px;
+  object-fit: contain;
+}
+
+.container-fluid {
+  padding-top: 70px; /* Adjust to navbar height */
+}
+
+#sidebarMenu {
+  position: fixed;
+  top: 70px; /* Adjust to navbar height */
+  left: 0;
+  width: 300px; /* Sidebar width */
+  height: calc(100% - 70px); /* Full height minus navbar height */
+  overflow-y: auto; /* Scrollable if content exceeds the height */
+  background-color: #f8f9fa; /* Background color to match your design */
+}
+
+.nav-link {
+  white-space: nowrap;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 2.5rem;
+}
+
+.col-10 {
+  margin-left: 300px; /* Adjust to sidebar width */
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  #sidebarMenu {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .col-10 {
+    margin-left: 0;
+  }
+}

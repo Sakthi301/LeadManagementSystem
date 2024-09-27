@@ -1,0 +1,69 @@
+/* Container for the table and fake scrollbar */
+.table-scroll-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  /* Ensure the fake scrollbar is hidden when not scrolling */
+}
+
+/* Fake scrollbar */
+.table-scrollbar {
+  height: 20px;
+  /* Height of the fake scrollbar */
+  overflow-x: auto;
+  /* Horizontal scrolling */
+  overflow-y: hidden;
+  /* Hide vertical scrollbar */
+  position: absolute;
+  top: 0;
+  /* Position the fake scrollbar at the top */
+  width: 100%;
+  /* Full width */
+}
+
+/* Fake scrollbar track */
+.fake-scroll {
+  height: 1px;
+}
+
+/* Table container */
+.table-container {
+  overflow-x: auto;
+  /* Enable horizontal scrolling */
+  white-space: nowrap;
+  /* Prevent text from wrapping */
+  margin-top: 20px;
+  /* Add margin to account for the fake scrollbar */
+}
+
+/* Hide actual table scrollbar */
+.table-container::-webkit-scrollbar {
+  display: none;
+  /* Chrome/Safari */
+}
+
+.table-container {
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+/* Make table headers sticky */
+.table thead th {
+  position: sticky;
+  top: 0;
+  background-color: #f8f9fa;
+  /* Light background for header */
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 8px;
+}
+
+.custom-button {
+  margin-top: 20px;
+}
+

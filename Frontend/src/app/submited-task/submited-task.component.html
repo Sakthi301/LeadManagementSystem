@@ -1,0 +1,62 @@
+<div class="container mt-4">
+  <h2>Submitted Tasks</h2>
+
+  <div class="table-scroll-wrapper">
+    <div class="table-container">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Executive</th>
+            <th>Assigned Date</th>
+            <th>Assigned Time</th>
+            <th>Unique Query ID</th>
+            <th>Query Type</th>
+            <th>Query Time</th>
+            <th>Sender Name</th>
+            <th>Sender Mobile</th>
+            <th>Sender Email</th>
+            <th>Subject</th>
+            <th>Sender Company</th>
+            <th>Sender Address</th>
+            <th>Sender City</th>
+            <th>Sender State</th>
+            <th>Sender Pincode</th>
+            <th>Sender Country ISO</th>
+            <th>Query Product Name</th>
+            <th>Query Message</th>
+            <th>Query MCAT Name</th>
+            <th>Call Duration</th>
+            <th>Receiver Mobile</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let task of submitedTasks">
+            <td>{{ task.id }}</td>
+            <td>{{ task.executiveName }}</td>
+            <td>{{ task.assignedDate }}</td>
+            <td>{{ task.assignedTime }}</td>
+            <td>{{ task.uniqueQueryId }}</td>
+            <td>{{ task.queryType }}</td>
+            <td>{{ task.queryTime }}</td>
+            <td>{{ task.senderName }}</td>
+            <td>{{ task.senderMobile }}</td>
+            <td>{{ task.senderEmail }}</td>
+            <td>{{ task.subject }}</td>
+            <td>{{ task.senderCompany }}</td>
+            <td>{{ task.senderAddress }}</td>
+            <td>{{ task.senderCity }}</td>
+            <td>{{ task.senderState }}</td>
+            <td>{{ task.senderPincode }}</td>
+            <td>{{ task.senderCountryIso }}</td>
+            <td>{{ task.queryProductName }}</td>
+            <td>{{ task.queryMessage }}</td>
+            <td>{{ task.queryMcatName }}</td>
+            <td>{{ task.callDuration }}</td>
+            <td>{{ task.receiverMobile }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
